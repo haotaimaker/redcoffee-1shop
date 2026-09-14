@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-14",
+  "sourceLanguage": "zh-TW",
+  "targetLanguage": "en",
+  "exact": {
+    "玄雨滴雞精測試": "Red Fruit Coffee",
+    "雞油蔥醬": "Chicken Oil and Scallion Sauce",
+    "信箱": "Email",
+    "電話": "Phone",
+    "聯絡客服": "Contact Us",
+    "立即結帳": "Checkout Now"
+  }
+}
