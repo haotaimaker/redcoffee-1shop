@@ -21,6 +21,7 @@
     target.innerHTML = markup;
     var root = target.querySelector('.rc-site');
     if (!root) throw new Error('Redcoffee root not found');
+    if (document.getElementById('language-switch')) root.classList.add('has-shop-language');
     root.querySelectorAll('[src^="/assets/"]').forEach(function (node) { node.src = asset('assets/' + node.getAttribute('src').split('/').pop()); });
     window.__REDCOFFEE_PENDING_ROOT__ = root;
     var runtime = document.createElement('script'); runtime.src = asset('redcoffee-runtime.js'); runtime.async = false; document.body.appendChild(runtime);
