@@ -1,20 +1,23 @@
 :root {
-  --color-paper: oklch(91% 0.032 73);
-  --color-paper-2: oklch(86% 0.043 68);
-  --color-paper-3: oklch(95% 0.022 76);
-  --color-surface: oklch(94% 0.024 75);
-  --color-surface-strong: oklch(23% 0.045 34);
-  --color-hero: oklch(18% 0.035 31);
-  --color-footer: oklch(14% 0.029 30);
-  --color-nav: oklch(17% 0.033 31);
-  --color-ink: oklch(20% 0.032 38);
-  --color-ink-2: oklch(35% 0.031 43);
-  --color-muted: oklch(48% 0.028 49);
-  --color-rule: oklch(49% 0.045 48);
-  --color-accent: oklch(43% 0.14 29);
-  --color-accent-dark: oklch(31% 0.09 29);
-  --color-accent-ink: oklch(95% 0.025 76);
-  --color-focus: oklch(62% 0.14 50);
+  /* Screen palette informed by PANTONE 19-0915 Coffee Bean,
+     PANTONE 18-1755 Rouge Red, and PANTONE 16-1220 Cafe Creme.
+     Digital values are contrast-corrected approximations, not print matches. */
+  --color-paper: #f8f1df;
+  --color-paper-2: #c99563;
+  --color-paper-3: #fffaf0;
+  --color-surface: #fffaf0;
+  --color-surface-strong: #18100d;
+  --color-hero: #120b09;
+  --color-footer: #120b09;
+  --color-nav: #120b09;
+  --color-ink: #17100e;
+  --color-ink-2: #49352d;
+  --color-muted: #70584c;
+  --color-rule: #7d5b4d;
+  --color-accent: #ad123b;
+  --color-accent-dark: #3b0d18;
+  --color-accent-ink: #fff8e8;
+  --color-focus: #ffcf40;
   --font-display: "Newsreader", "Noto Serif TC", serif;
   --font-body: "Bricolage Grotesque", "Noto Sans TC", sans-serif;
   --font-mono: "DM Mono", monospace;

@@ -1838,6 +1838,336 @@
   .rc-site.site-shell .use-card { border-right: 0; }
 }
 
+/* Story House v2 — Pantone-informed high-contrast exhibition system */
+.rc-site.site-shell #rc-nav {
+  border-bottom-color: #6f493d;
+}
+
+.rc-site.site-shell button:focus-visible,
+.rc-site.site-shell a:focus-visible,
+.rc-site.site-shell input:focus-visible,
+.rc-site.site-shell textarea:focus-visible {
+  outline-color: var(--color-focus);
+  outline-width: 3px;
+  outline-offset: 4px;
+}
+
+.rc-site.site-shell .coffee-wordmark strong,
+.rc-site.site-shell .hero h1,
+.rc-site.site-shell .panel h2 {
+  text-shadow: none;
+}
+
+.rc-site.site-shell .hero {
+  min-height: 940px;
+  padding-bottom: clamp(7rem, 14vh, 10rem);
+}
+
+.rc-site.site-shell .hero-inner {
+  width: min(100%, 1420px);
+  border-left: 6px solid var(--color-accent);
+  padding-left: clamp(1.5rem, 6vw, 6.5rem);
+}
+
+.rc-site.site-shell .hero h1 {
+  max-width: 8.7ch;
+  font-size: clamp(5rem, 10.2vw, 10.2rem);
+}
+
+.rc-site.site-shell .hero .gradient-text {
+  color: #e95b4f;
+}
+
+.rc-site.site-shell .hero-copy {
+  max-width: 34ch;
+  color: #fff8e8;
+  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+}
+
+.rc-site.site-shell .stats-wrap {
+  border-top: 8px solid var(--color-accent);
+}
+
+.rc-site.site-shell .statsband {
+  grid-template-columns: 1.35fr 0.8fr 1.1fr 1.75fr;
+  color: var(--color-accent-ink);
+  border-color: #654438;
+  background: #18100d;
+}
+
+.rc-site.site-shell .statsband > div {
+  border-color: #654438;
+}
+
+.rc-site.site-shell .statsband strong {
+  color: #e95b4f;
+}
+
+.rc-site.site-shell .statsband span {
+  color: #e3d6c0;
+}
+
+.rc-site.site-shell .section {
+  padding-block: clamp(6rem, 12vw, 12rem);
+}
+
+.rc-site.site-shell .panel {
+  width: min(88%, 1340px);
+  min-height: 760px;
+  padding: clamp(4rem, 8vw, 8rem);
+  border-top: 12px solid var(--color-accent);
+}
+
+.rc-site.site-shell #rc-why .panel,
+.rc-site.site-shell #rc-process .panel,
+.rc-site.site-shell .testimonial-panel {
+  width: min(82%, 1240px);
+  margin-left: 0;
+}
+
+.rc-site.site-shell #rc-system .panel,
+.rc-site.site-shell #rc-plans .panel,
+.rc-site.site-shell .faq-panel {
+  width: min(88%, 1340px);
+  margin-right: 0;
+}
+
+.rc-site.site-shell #rc-system .panel,
+.rc-site.site-shell .dark-panel,
+.rc-site.site-shell .faq-panel {
+  border-top-color: #e95b4f;
+  background: #18100d;
+}
+
+.rc-site.site-shell #rc-plans .panel {
+  color: var(--color-ink);
+  border-top-color: #18100d;
+  background: #fffaf0;
+}
+
+.rc-site.site-shell .testimonial-panel {
+  border-top-color: #c99563;
+  background: #fffaf0;
+}
+
+.rc-site.site-shell .contact-panel {
+  width: min(94%, 1440px);
+  min-height: 820px;
+  display: grid;
+  align-content: center;
+  border-top-color: #fff8e8;
+  background: var(--color-accent);
+}
+
+.rc-site.site-shell .panel .eyebrow {
+  margin-bottom: clamp(3rem, 8vw, 7rem);
+  padding: 0.7rem 0;
+  color: var(--color-accent);
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  font-weight: 700;
+}
+
+.rc-site.site-shell #rc-system .eyebrow,
+.rc-site.site-shell .dark-panel .eyebrow,
+.rc-site.site-shell .faq-panel .eyebrow {
+  color: #e95b4f;
+}
+
+.rc-site.site-shell .contact-panel .eyebrow {
+  color: #fff8e8;
+}
+
+.rc-site.site-shell .panel h2 {
+  max-width: 10ch;
+  font-size: clamp(3.5rem, 6.2vw, 7.1rem);
+  line-height: 0.92;
+}
+
+.rc-site.site-shell .panel .lede {
+  margin-top: 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.rc-site.site-shell .benefit-grid {
+  grid-template-columns: 1.45fr 0.8fr 1.1fr;
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
+.rc-site.site-shell .benefit-card {
+  min-height: 330px;
+  padding: 2.5rem clamp(1.5rem, 3vw, 3rem);
+}
+
+.rc-site.site-shell .benefit-card:first-child {
+  padding-left: 0;
+}
+
+.rc-site.site-shell .benefit-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 650;
+}
+
+.rc-site.site-shell .system-panel {
+  grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1.42fr);
+  column-gap: clamp(3rem, 8vw, 8rem);
+}
+
+.rc-site.site-shell .feature-card {
+  min-height: 180px;
+  padding-right: 5rem;
+}
+
+.rc-site.site-shell .feature-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+}
+
+.rc-site.site-shell .process-grid {
+  grid-template-columns: 1.45fr 0.8fr 1.1fr;
+  gap: 0;
+}
+
+.rc-site.site-shell .step-card {
+  min-height: 330px;
+  padding: 2.2rem;
+  border-right: 1px solid var(--color-rule);
+}
+
+.rc-site.site-shell .step-card:first-child {
+  padding-left: 0;
+}
+
+.rc-site.site-shell .plans-grid {
+  grid-template-columns: 0.82fr 1.18fr;
+  margin-top: 6rem;
+}
+
+.rc-site.site-shell .plan-card,
+.rc-site.site-shell .plan-card.lite,
+.rc-site.site-shell .plan-card.full {
+  min-height: 660px;
+  padding: clamp(2.5rem, 5vw, 5rem);
+}
+
+.rc-site.site-shell .plan-card.lite {
+  background: #fffaf0;
+}
+
+.rc-site.site-shell .plan-card.full {
+  background: var(--color-accent);
+}
+
+.rc-site.site-shell .plan-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 4.4rem);
+  font-weight: 650;
+}
+
+.rc-site.site-shell .dark-panel .use-grid {
+  grid-template-columns: 1.4fr 0.75fr 1.1fr;
+  border-color: #6f493d;
+}
+
+.rc-site.site-shell .dark-panel .use-card {
+  min-height: 220px;
+  padding: 2rem;
+  border-color: #6f493d;
+}
+
+.rc-site.site-shell .dark-panel .use-card:nth-child(1),
+.rc-site.site-shell .dark-panel .use-card:nth-child(4) {
+  padding-left: 0;
+}
+
+.rc-site.site-shell .dark-panel .use-card h3 {
+  color: #fff8e8;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.6vw, 2.8rem);
+}
+
+.rc-site.site-shell .quote-grid {
+  grid-template-columns: 1.5fr 0.75fr 1fr 1.25fr;
+  gap: 0;
+  margin-top: 7rem;
+  border-block: 2px solid var(--color-rule);
+}
+
+.rc-site.site-shell .journey-card {
+  min-height: 430px;
+  padding: 2.3rem;
+  border-top: 0;
+  border-right: 1px solid var(--color-rule);
+}
+
+.rc-site.site-shell .journey-card:first-child {
+  padding-left: 0;
+}
+
+.rc-site.site-shell .journey-card:last-child {
+  border-right: 0;
+}
+
+.rc-site.site-shell .journey-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3.5rem);
+}
+
+.rc-site.site-shell .faq-list {
+  max-width: 860px;
+  margin-top: 7rem;
+}
+
+.rc-site.site-shell .faq-item button {
+  min-height: 92px;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+}
+
+.rc-site.site-shell footer {
+  border-top: 8px solid var(--color-accent);
+}
+
+@media (max-width: 900px) {
+  .rc-site.site-shell .panel,
+  .rc-site.site-shell #rc-why .panel,
+  .rc-site.site-shell #rc-process .panel,
+  .rc-site.site-shell .testimonial-panel,
+  .rc-site.site-shell #rc-system .panel,
+  .rc-site.site-shell #rc-plans .panel,
+  .rc-site.site-shell .faq-panel,
+  .rc-site.site-shell .contact-panel {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .rc-site.site-shell .system-panel { grid-template-columns: 1fr; }
+  .rc-site.site-shell .quote-grid { grid-template-columns: repeat(2, 1fr); }
+  .rc-site.site-shell .journey-card:nth-child(2) { border-right: 0; }
+}
+
+@media (max-width: 680px) {
+  .rc-site.site-shell .hero { min-height: 790px; }
+  .rc-site.site-shell .hero h1 { font-size: clamp(3.7rem, 18vw, 5.8rem); }
+  .rc-site.site-shell .statsband { grid-template-columns: 1fr; }
+  .rc-site.site-shell .section { padding-block: 4rem; }
+  .rc-site.site-shell .panel { padding: 4rem 1.35rem; border-top-width: 8px; }
+  .rc-site.site-shell .panel h2 { font-size: clamp(3rem, 14vw, 5rem); }
+  .rc-site.site-shell .benefit-grid,
+  .rc-site.site-shell .process-grid,
+  .rc-site.site-shell .dark-panel .use-grid,
+  .rc-site.site-shell .quote-grid { grid-template-columns: 1fr; }
+  .rc-site.site-shell .benefit-card,
+  .rc-site.site-shell .step-card,
+  .rc-site.site-shell .journey-card,
+  .rc-site.site-shell .dark-panel .use-card { min-height: auto; padding: 2rem 0; border-right: 0; }
+  .rc-site.site-shell .feature-card { padding-right: 3rem; }
+  .rc-site.site-shell .quote-grid { margin-top: 4rem; }
+  .rc-site.site-shell .journey-card { border-bottom: 1px solid var(--color-rule); }
+}
+
 .rc-site{
   isolation: isolate;
   width: 100%;
