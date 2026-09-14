@@ -1011,7 +1011,10 @@
 
 .rc-site{
   isolation: isolate;
-  width: 100%;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   opacity: 0;
   transition: opacity .28s ease;
 }
