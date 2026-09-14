@@ -4,6 +4,9 @@
   var targetSelector = script.getAttribute('data-redcoffee-target') || '#redcoffee-embed';
   var target = document.querySelector(targetSelector);
   if (!target) { target = document.createElement('div'); target.id = targetSelector.replace(/^#/, '') || 'redcoffee-embed'; script.parentNode.insertBefore(target, script); }
+  var shopContainer = target.closest('.container');
+  var shopPage = shopContainer && shopContainer.parentElement;
+  if (shopPage && shopPage.classList.contains('page-single')) shopPage.insertBefore(target, shopContainer);
   if (target.dataset.redcoffeeLoading === 'true' || target.querySelector('.rc-site')) return;
   target.dataset.redcoffeeLoading = 'true';
   var base = new URL('.', script.src);
