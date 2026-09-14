@@ -81,8 +81,19 @@
     modal.classList.toggle('open', open);
     modal.setAttribute('aria-hidden', open ? 'false' : 'true');
   }
-  root.querySelectorAll('main .button.primary, .nav-cta, .plan-card.full > button').forEach(function (button) {
-    button.addEventListener('click', function () { setModal(true); });
+  function storefrontUrl(path) {
+    var url = new URL(path, window.location.origin);
+    if (language === 'en') url.searchParams.set('lang', 'en');
+    return url.toString();
+  }
+  root.querySelectorAll('.nav-cta, .hero .button.primary, .plan-card.full > button').forEach(function (button) {
+    button.addEventListener('click', function () { window.location.assign(storefrontUrl('/categories/all')); });
+  });
+  root.querySelectorAll('.contact-section .button.primary').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var nativeContact = document.querySelector('button.btn-action');
+      if (nativeContact) nativeContact.click(); else setModal(true);
+    });
   });
   root.querySelectorAll('.modal-backdrop, .modal-close').forEach(function (button) {
     button.addEventListener('click', function () { setModal(false); });

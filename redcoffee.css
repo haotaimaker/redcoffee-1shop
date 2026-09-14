@@ -2288,50 +2288,30 @@
   opacity: 1;
 }
 
+
 /* Mobile composition: reflow the exhibition instead of cropping a desktop stage. */
 @media (max-width: 680px) {
-  .rc-site.site-shell {
-    width: 100%;
-    min-width: 0;
-    overflow-x: clip;
-  }
-
+  .rc-site.site-shell { width: 100%; min-width: 0; overflow-x: clip; }
   .rc-site.site-shell .hero {
     min-height: min(760px, calc(100svh - 56px));
     padding: clamp(5rem, 18vw, 6.5rem) 1rem 3.5rem;
     place-items: center start;
   }
-
   .rc-site.site-shell .hero-inner {
-    width: 100%;
-    max-width: 100%;
+    width: 100%; max-width: 100%;
     padding-left: clamp(.9rem, 4vw, 1.25rem);
     border-left-width: 4px;
   }
-
   .rc-site.site-shell .hero h1 {
-    width: 100%;
-    max-width: 9ch;
+    width: 100%; max-width: 9ch;
     font-size: clamp(2.75rem, 13.5vw, 4.6rem);
-    line-height: .92;
-    letter-spacing: -.055em;
+    line-height: .92; letter-spacing: -.055em;
     overflow-wrap: normal;
   }
-
-  .rc-site.site-shell .hero-copy {
-    max-width: 30ch;
-    font-size: 1rem;
-  }
-
+  .rc-site.site-shell .hero-copy { max-width: 30ch; font-size: 1rem; }
   .rc-site.site-shell #rc-scene,
-  .rc-site.site-shell .scene-wash {
-    width: 100vw;
-    height: 100svh;
-  }
+  .rc-site.site-shell .scene-wash { width: 100vw; height: 100svh; }
 }
-
 @media (max-width: 390px) {
-  .rc-site.site-shell .hero h1 {
-    font-size: clamp(2.45rem, 13vw, 3.2rem);
-  }
+  .rc-site.site-shell .hero h1 { font-size: clamp(2.45rem, 13vw, 3.2rem); }
 }
