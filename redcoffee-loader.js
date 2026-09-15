@@ -11,20 +11,24 @@
   target.dataset.redcoffeeLoading = 'true';
   var base = new URL('.', script.src);
   function asset(path) { return new URL(path, base).href; }
-  if (!document.querySelector('link[data-redcoffee-style]')) {
-    var link = document.createElement('link'); link.rel = 'stylesheet'; link.href = asset('redcoffee.css'); link.dataset.redcoffeeStyle = 'true'; document.head.appendChild(link);
+  function text(path) {
+    return fetch(asset(path)).then(function (response) {
+      if (!response.ok) throw new Error(path + ': HTTP ' + response.status);
+      return response.text();
+    });
   }
-  fetch(asset('redcoffee-fragment.html')).then(function (response) {
-    if (!response.ok) throw new Error('HTTP ' + response.status);
-    return response.text();
-  }).then(function (markup) {
+  Promise.all([text('redcoffee.css'), text('redcoffee-fragment.html'), text('redcoffee-runtime.js')]).then(function (assets) {
+    var style = document.querySelector('style[data-redcoffee-style]');
+    if (!style) { style = document.createElement('style'); style.dataset.redcoffeeStyle = 'true'; document.head.appendChild(style); }
+    style.textContent = assets[0];
+    var markup = assets[1];
     target.innerHTML = markup;
     var root = target.querySelector('.rc-site');
     if (!root) throw new Error('Redcoffee root not found');
     if (document.getElementById('language-switch')) root.classList.add('has-shop-language');
     root.querySelectorAll('[src^="/assets/"]').forEach(function (node) { node.src = asset('assets/' + node.getAttribute('src').split('/').pop()); });
     window.__REDCOFFEE_PENDING_ROOT__ = root;
-    var runtime = document.createElement('script'); runtime.src = asset('redcoffee-runtime.js'); runtime.async = false; document.body.appendChild(runtime);
+    var runtime = document.createElement('script'); runtime.text = assets[2]; document.body.appendChild(runtime); runtime.remove();
   }).catch(function (error) {
     target.innerHTML = '<p style="padding:24px;font:14px sans-serif;color:#8b1e1e">紅菓咖啡頁面暫時無法載入，請稍後再試。</p>';
     console.error('[Redcoffee]', error);
